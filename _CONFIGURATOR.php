@@ -2,7 +2,7 @@
 
 $BackendPath = 'backend/config.php';
 if (file_exists($BackendPath)) {
-    include $BackendPath; // for old stuff
+    include $BackendPath; 
 } else {
     $JELLYFIN_URL = "";
     $API_KEY = "";
@@ -17,10 +17,10 @@ if (isset($_POST['subm'])) {
     $NEW_FFPATH = var_export($_POST['ffmpeg_path'] ?? "", true);
     
     $config_content = "<?php\n\n";
-    $config_content .= "\$JELLYFIN_URL = \"" . $NEW_JELLYFIN_URL . "\";\n";
-    $config_content .= "\$API_KEY = \"" . $NEW_API_KEY . "\";\n";
-    $config_content .= "\$USER_ID = \"" . $NEW_USID . "\";\n";
-    $config_content .= "\$ffmpeg = \"" . $NEW_FFPATH . "\";\n\n";
+    $config_content .= "\$JELLYFIN_URL = " . $NEW_JELLYFIN_URL . ";\n";
+    $config_content .= "\$API_KEY = " . $NEW_API_KEY . ";\n";
+    $config_content .= "\$USER_ID = " . $NEW_USID . ";\n";
+    $config_content .= "\$ffmpeg = " . $NEW_FFPATH . ";\n\n";
 
     $config_content .= "\$CONFIG = [\n";
     $config_content .= "    'jellyfin_url' => \$JELLYFIN_URL,\n";
@@ -29,6 +29,7 @@ if (isset($_POST['subm'])) {
     $config_content .= "    'ffmpeg' => \$ffmpeg\n";
     $config_content .= "];\n\n";
     $config_content .= "?>";
+
     file_put_contents($BackendPath, $config_content);
     header("Location: index.php");
     exit();
