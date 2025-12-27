@@ -16,7 +16,19 @@ if (isset($_POST['subm'])) {
     $NEW_JELLYFIN_URL = $_POST['jellyfin_url'];
     $NEW_FFPATH = $_POST['ffmpeg_path'] ?? ""; // Get ffmpeg path from form
     
-    $config_content = "<?php\n\n\$JELLYFIN_URL = \"" . $NEW_JELLYFIN_URL . "\"; \n\$API_KEY = \"" . $NEW_API_KEY . "\";\n\$USER_ID = \"" . $NEW_USID . "\";\n\$ffmpeg = \"" . $NEW_FFPATH . "\";\n\n?>";
+    $config_content = "<?php\n\n";
+    $config_content .= "\$JELLYFIN_URL = \"" . $NEW_JELLYFIN_URL . "\";\n";
+    $config_content .= "\$API_KEY = \"" . $NEW_API_KEY . "\";\n";
+    $config_content .= "\$USER_ID = \"" . $NEW_USID . "\";\n";
+    $config_content .= "\$ffmpeg = \"" . $NEW_FFPATH . "\";\n\n";
+
+    $config_content .= "\$CONFIG = [\n";
+    $config_content .= "    'jellyfin_url' => \$JELLYFIN_URL,\n";
+    $config_content .= "    'api_key' => \$API_KEY,\n";
+    $config_content .= "    'user_id' => \$USER_ID,\n";
+    $config_content .= "    'ffmpeg' => \$ffmpeg\n";
+    $config_content .= "];\n\n";
+    $config_content .= "?>";
     file_put_contents($BackendPath, $config_content);
     header("Location: index.php");
     exit();
