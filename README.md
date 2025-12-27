@@ -2,6 +2,8 @@
 
 A Jellyfin frontend for the New Nintendo 3DS!
 
+A sister project to [Project Cappuccino](https://github.com/dogeeeeeeeeeeeee/ProjectCappuccino).
+
 # Installation
 
 Installation is simple.
