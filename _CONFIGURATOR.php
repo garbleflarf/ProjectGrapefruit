@@ -11,10 +11,10 @@ if (file_exists($BackendPath)) {
 }
 
 if (isset($_POST['subm'])) {
-    $NEW_API_KEY = $_POST['api_key'];
-    $NEW_USID = $_POST['user_id'];
-    $NEW_JELLYFIN_URL = $_POST['jellyfin_url'];
-    $NEW_FFPATH = $_POST['ffmpeg_path'] ?? ""; // Get ffmpeg path from form
+    $NEW_API_KEY = var_export($_POST['api_key'], true);
+    $NEW_USID = var_export($_POST['user_id'], true);
+    $NEW_JELLYFIN_URL = var_export($_POST['jellyfin_url'], true);
+    $NEW_FFPATH = var_export($_POST['ffmpeg_path'] ?? "", true);
     
     $config_content = "<?php\n\n";
     $config_content .= "\$JELLYFIN_URL = \"" . $NEW_JELLYFIN_URL . "\";\n";
