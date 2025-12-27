@@ -1,0 +1,160 @@
+/* Grapefruit - N3DS Optimized */
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f0f0;
+    color: #333;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Prevents text flickering when zooming */
+    -webkit-text-size-adjust: none; 
+}
+
+.ctr-header {
+    background: #e0e0e0;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+
+.ctr-item {
+    display: block;
+    background: #fff;
+    margin: 6px 8px; /* Slightly more vertical gap */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-left: 6px solid #ff8c00; 
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    -webkit-border-radius: 4px;
+}
+
+/* Give the user feedback when they tap */
+.ctr-item:active, .ctr-btn:active {
+    background: #ff8c00;
+    color: #fff;
+}
+
+.ctr-item:focus {
+    outline: 3px solid #ff8c00;
+    background: #fff5e6;
+}
+
+.type-tag {
+    display: inline-block;
+    background: #666;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 5px;
+    margin-right: 8px;
+    -webkit-border-radius: 2px;
+    vertical-align: middle;
+}
+
+.tag-episode {
+    background: #630;
+}
+
+.tag-series {
+    background: #360;
+}
+
+.tag-movie {
+    background: #603;
+}
+
+.ctr-nav {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.ctr-btn {
+    display: inline-block;
+    width: 42%; /* Adjusted for 320px screens */
+    padding: 12px 5px;
+    background: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    text-decoration: none;
+    color: #ff8c00;
+    font-weight: bold;
+    -webkit-border-radius: 4px;
+}
+
+.status-box {
+    background: #fffbe6;
+    border: 1px solid #ffe58f;
+    padding: 10px;
+    font-size: 12px;
+    margin: 10px 8px;
+    -webkit-border-radius: 4px;
+    color: #856404;
+    text-align: left;
+}
+
+/* ===== Configurator tweaks (minimal) ===== */
+
+.config-container {
+    background: #fff;
+    margin: 8px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-left: 6px solid #ff8c00;
+    -webkit-border-radius: 4px;
+}
+
+/* Inputs styled to match Grapefruit */
+.config-container input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+}
+
+.config-container input:focus {
+    outline: 3px solid #ff8c00;
+    outline-offset: 1px;
+}
+
+/* Labels: compact + readable */
+.config-container label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* Headings inside config */
+.config-container h1 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.config-container h2 {
+    font-size: 14px;
+    margin: 10px 0 4px;
+}
+
+/* Lists inside config */
+.config-container ol,
+.config-container ul {
+    margin-left: 16px;
+    font-size: 12px;
+}
+
+.config-container li {
+    margin-bottom: 4px;
+}
+
+/* Code blocks already fit, just tighten */
+.config-container code {
+    font-size: 11px;
+}
