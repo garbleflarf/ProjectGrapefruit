@@ -56,7 +56,7 @@ $ITEM_ID = $item['Id'];
                     }
 
                     document.getElementById('player-area').innerHTML = 
-                        '<a href="backend/stream_proxy.php?vidID=<?php echo $vidID; ?>" class="ctr-btn" style="background: #28a745;">START</a>' +
+                        '<a href="backend/stream_proxy.php?vidID=<?php echo $vidID; ?>" class="ctr-btn" style="background: #28a745; color: #282828;">START</a>' +
                         '<p style="font-size:10px; margin-top:5px;">Clicking will open the media player</p>';
                 } else {
                     pollTimeout = setTimeout(checkStatus, 5000);

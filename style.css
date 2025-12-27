@@ -34,6 +34,7 @@ body {
     color: #444;
     font-weight: bold;
     -webkit-border-radius: 4px;
+    border-radius: 4px;
 }
 
 /* Give the user feedback when they tap */
@@ -55,6 +56,7 @@ body {
     padding: 2px 5px;
     margin-right: 8px;
     -webkit-border-radius: 2px;
+    border-radius: 2px;
     vertical-align: middle;
 }
 
@@ -86,6 +88,7 @@ body {
     color: #ff8c00;
     font-weight: bold;
     -webkit-border-radius: 4px;
+    border-radius: 4px;
 }
 
 .status-box {
@@ -95,6 +98,7 @@ body {
     font-size: 12px;
     margin: 10px 8px;
     -webkit-border-radius: 4px;
+    border-radius: 4px;
     color: #856404;
     text-align: left;
 }
@@ -108,6 +112,7 @@ body {
     border: 1px solid #ccc;
     border-left: 6px solid #ff8c00;
     -webkit-border-radius: 4px;
+    border-radius: 4px;
 }
 
 /* Inputs styled to match Grapefruit */
@@ -117,6 +122,7 @@ body {
     border: 1px solid #ccc;
     font-size: 12px;
     -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
 
 .config-container input:focus {
